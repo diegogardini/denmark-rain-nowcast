@@ -1,0 +1,15 @@
+.venv/
+data/
+__pycache__/
+*.pyc
+.pytest_cache/
+results/*.jsonl
+results/*.log
+docs/page.html
+*.mp4
+
+# raw DMI station observations (re-fetch with scripts/fetch_station_wind.py)
+results/station-wind.json
+
+# papers kept locally for reading (copyrighted; cited by DOI in the report)
+literature/

@@ -1,0 +1,45 @@
+{
+ "threshold": 0.01,
+ "core_cells": 29,
+ "masked_cells": 100,
+ "masked_in_box": 100,
+ "box_cells": 18447,
+ "box_p99": 0.001300148549489677,
+ "spots": [
+  {
+   "lat": 54.834,
+   "lon": 13.856,
+   "cells": 6,
+   "peak": 0.0912,
+   "in_box": true
+  },
+  {
+   "lat": 54.834,
+   "lon": 14.061,
+   "cells": 13,
+   "peak": 0.0522,
+   "in_box": true
+  },
+  {
+   "lat": 55.007,
+   "lon": 13.189,
+   "cells": 5,
+   "peak": 0.0423,
+   "in_box": true
+  },
+  {
+   "lat": 55.639,
+   "lon": 12.573,
+   "cells": 3,
+   "peak": 0.0293,
+   "in_box": true
+  },
+  {
+   "lat": 55.553,
+   "lon": 12.983,
+   "cells": 2,
+   "peak": 0.0212,
+   "in_box": true
+  }
+ ]
+}

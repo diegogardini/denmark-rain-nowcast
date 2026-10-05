@@ -1,0 +1,817 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="448.468281pt" height="834.345273pt" viewBox="0 0 448.468281 834.345273" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-29T20:51:59.731531</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 834.345273 
+L 448.468281 834.345273 
+L 448.468281 0 
+L 0 0 
+z
+" style="fill: #0f151b"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 68.154688 323.318164 
+L 433.831875 323.318164 
+L 433.831875 26.298047 
+L 68.154688 26.298047 
+z
+" style="fill: #0f151b"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 84.776378 323.318164 
+L 84.776378 26.298047 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="mda3db98614" d="M 0 0 
+L 0 3.5 
+" style="stroke: #93a1ae; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mda3db98614" x="84.776378" y="323.318164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="84.776378" y="339.435352" transform="rotate(-0 84.776378 339.435352)">10</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 145.218888 323.318164 
+L 145.218888 26.298047 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mda3db98614" x="145.218888" y="323.318164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="145.218888" y="339.435352" transform="rotate(-0 145.218888 339.435352)">30</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 235.882654 323.318164 
+L 235.882654 26.298047 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#mda3db98614" x="235.882654" y="323.318164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="235.882654" y="339.435352" transform="rotate(-0 235.882654 339.435352)">60</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 326.546419 323.318164 
+L 326.546419 26.298047 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mda3db98614" x="326.546419" y="323.318164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="326.546419" y="339.435352" transform="rotate(-0 326.546419 339.435352)">90</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 417.210185 323.318164 
+L 417.210185 26.298047 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#mda3db98614" x="417.210185" y="323.318164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="417.210185" y="339.435352" transform="rotate(-0 417.210185 339.435352)">120</text>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #e6ebef" x="250.993281" y="355.436289" transform="rotate(-0 250.993281 355.436289)">minutes of history for the motion</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <path d="M 68.154688 305.622499 
+L 433.831875 305.622499 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <defs>
+       <path id="m67819be8ed" d="M 0 0 
+L -3.5 0 
+" style="stroke: #93a1ae; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="305.622499" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="310.181093" transform="rotate(-0 61.154688 310.181093)">0.180</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_13">
+      <path d="M 68.154688 268.929399 
+L 433.831875 268.929399 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="268.929399" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="273.487993" transform="rotate(-0 61.154688 273.487993)">0.185</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_15">
+      <path d="M 68.154688 232.236299 
+L 433.831875 232.236299 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="232.236299" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="236.794893" transform="rotate(-0 61.154688 236.794893)">0.190</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_17">
+      <path d="M 68.154688 195.543199 
+L 433.831875 195.543199 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="195.543199" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="200.101793" transform="rotate(-0 61.154688 200.101793)">0.195</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_19">
+      <path d="M 68.154688 158.850099 
+L 433.831875 158.850099 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="158.850099" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="163.408693" transform="rotate(-0 61.154688 163.408693)">0.200</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_21">
+      <path d="M 68.154688 122.157 
+L 433.831875 122.157 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="122.157" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="126.715593" transform="rotate(-0 61.154688 126.715593)">0.205</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_23">
+      <path d="M 68.154688 85.4639 
+L 433.831875 85.4639 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="85.4639" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="90.022493" transform="rotate(-0 61.154688 90.022493)">0.210</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_25">
+      <path d="M 68.154688 48.7708 
+L 433.831875 48.7708 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="48.7708" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="53.329394" transform="rotate(-0 61.154688 53.329394)">0.215</text>
+     </g>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #e6ebef" x="19.918125" y="174.808105" transform="rotate(-90 19.918125 174.808105)">FSS gain over persistence</text>
+    </g>
+   </g>
+   <g id="line2d_27">
+    <path d="M 84.776378 113.688211 
+L 114.997633 98.83037 
+L 145.218888 93.390657 
+L 175.440143 93.881438 
+L 235.882654 96.768561 
+L 326.546419 100.603138 
+L 417.210185 110.647022 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #c08318; stroke-width: 2.4; stroke-linecap: square"/>
+    <defs>
+     <path id="mda6978ce7d" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #c08318"/>
+    </defs>
+    <g clip-path="url(#p5ae7885e87)">
+     <use xlink:href="#mda6978ce7d" x="84.776378" y="113.688211" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="114.997633" y="98.83037" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="145.218888" y="93.390657" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="175.440143" y="93.881438" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="235.882654" y="96.768561" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="326.546419" y="100.603138" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="417.210185" y="110.647022" style="fill: #c08318; stroke: #c08318"/>
+    </g>
+   </g>
+   <g id="line2d_28">
+    <path d="M 84.776378 90.390986 
+L 145.218888 71.671046 
+L 235.882654 45.735578 
+L 417.210185 34.736118 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke: #df5f86; stroke-width: 2.4; stroke-linecap: square"/>
+    <defs>
+     <path id="mfc8ffb878c" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #df5f86"/>
+    </defs>
+    <g clip-path="url(#p5ae7885e87)">
+     <use xlink:href="#mfc8ffb878c" x="84.776378" y="90.390986" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="145.218888" y="71.671046" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="235.882654" y="45.735578" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="417.210185" y="34.736118" style="fill: #df5f86; stroke: #df5f86"/>
+    </g>
+   </g>
+   <g id="line2d_29">
+    <path d="M 84.776378 149.645277 
+L 114.997633 143.63222 
+L 145.218888 147.863337 
+L 175.440143 154.277948 
+L 235.882654 175.38636 
+L 326.546419 184.459649 
+L 417.210185 203.497549 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #c08318; stroke-width: 2.4"/>
+    <g clip-path="url(#p5ae7885e87)">
+     <use xlink:href="#mda6978ce7d" x="84.776378" y="149.645277" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="114.997633" y="143.63222" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="145.218888" y="147.863337" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="175.440143" y="154.277948" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="235.882654" y="175.38636" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="326.546419" y="184.459649" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="417.210185" y="203.497549" style="fill: #c08318; stroke: #c08318"/>
+    </g>
+   </g>
+   <g id="line2d_30">
+    <path d="M 84.776378 117.442434 
+L 145.218888 92.655436 
+L 235.882654 121.481261 
+L 417.210185 129.830984 
+" clip-path="url(#p5ae7885e87)" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #df5f86; stroke-width: 2.4"/>
+    <g clip-path="url(#p5ae7885e87)">
+     <use xlink:href="#mfc8ffb878c" x="84.776378" y="117.442434" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="145.218888" y="92.655436" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="235.882654" y="121.481261" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="417.210185" y="129.830984" style="fill: #df5f86; stroke: #df5f86"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 68.154688 323.318164 
+L 68.154688 26.298047 
+" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 68.154688 323.318164 
+L 433.831875 323.318164 
+" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="68.154688" y="20.298047" transform="rotate(-0 68.154688 20.298047)">More history: a little for block matching</text>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_31">
+     <path d="M 68.318281 293.415039 
+L 78.318281 293.415039 
+L 88.318281 293.415039 
+" style="fill: none; stroke: #c08318; stroke-width: 2.4; stroke-linecap: square"/>
+     <g>
+      <use xlink:href="#mda6978ce7d" x="78.318281" y="293.415039" style="fill: #c08318; stroke: #c08318"/>
+     </g>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="96.318281" y="296.915039" transform="rotate(-0 96.318281 296.915039)">Whole-map vector, +60 min</text>
+    </g>
+    <g id="line2d_32">
+     <path d="M 68.318281 308.41582 
+L 78.318281 308.41582 
+L 88.318281 308.41582 
+" style="fill: none; stroke: #df5f86; stroke-width: 2.4; stroke-linecap: square"/>
+     <g>
+      <use xlink:href="#mfc8ffb878c" x="78.318281" y="308.41582" style="fill: #df5f86; stroke: #df5f86"/>
+     </g>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="96.318281" y="311.91582" transform="rotate(-0 96.318281 311.91582)">Block matching, +60 min</text>
+    </g>
+    <g id="line2d_33">
+     <path d="M 257.812031 293.415039 
+L 267.812031 293.415039 
+L 277.812031 293.415039 
+" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #c08318; stroke-width: 2.4"/>
+     <g>
+      <use xlink:href="#mda6978ce7d" x="267.812031" y="293.415039" style="fill: #c08318; stroke: #c08318"/>
+     </g>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="285.812031" y="296.915039" transform="rotate(-0 285.812031 296.915039)">Whole-map vector, +180 min</text>
+    </g>
+    <g id="line2d_34">
+     <path d="M 257.812031 308.41582 
+L 267.812031 308.41582 
+L 277.812031 308.41582 
+" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #df5f86; stroke-width: 2.4"/>
+     <g>
+      <use xlink:href="#mfc8ffb878c" x="267.812031" y="308.41582" style="fill: #df5f86; stroke: #df5f86"/>
+     </g>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="285.812031" y="311.91582" transform="rotate(-0 285.812031 311.91582)">Block matching, +180 min</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_5">
+    <path d="M 68.154688 684.038164 
+L 433.831875 684.038164 
+L 433.831875 387.018047 
+L 68.154688 387.018047 
+z
+" style="fill: #0f151b"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_6">
+     <g id="line2d_35">
+      <path d="M 84.776378 684.038164 
+L 84.776378 387.018047 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_36">
+      <g>
+       <use xlink:href="#mda3db98614" x="84.776378" y="684.038164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="84.776378" y="700.155352" transform="rotate(-0 84.776378 700.155352)">30</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_37">
+      <path d="M 177.506443 684.038164 
+L 177.506443 387.018047 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_38">
+      <g>
+       <use xlink:href="#mda3db98614" x="177.506443" y="684.038164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="177.506443" y="700.155352" transform="rotate(-0 177.506443 700.155352)">60</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_39">
+      <path d="M 270.236508 684.038164 
+L 270.236508 387.018047 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_40">
+      <g>
+       <use xlink:href="#mda3db98614" x="270.236508" y="684.038164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="270.236508" y="700.155352" transform="rotate(-0 270.236508 700.155352)">120</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_41">
+      <path d="M 362.966574 684.038164 
+L 362.966574 387.018047 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_42">
+      <g>
+       <use xlink:href="#mda3db98614" x="362.966574" y="684.038164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="362.966574" y="700.155352" transform="rotate(-0 362.966574 700.155352)">240</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_43">
+      <path d="M 417.210185 684.038164 
+L 417.210185 387.018047 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_44">
+      <g>
+       <use xlink:href="#mda3db98614" x="417.210185" y="684.038164" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #93a1ae" x="417.210185" y="700.155352" transform="rotate(-0 417.210185 700.155352)">360</text>
+     </g>
+    </g>
+    <g id="text_26">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #e6ebef" x="250.993281" y="716.156289" transform="rotate(-0 250.993281 716.156289)">lead time (minutes)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_9">
+     <g id="line2d_45">
+      <path d="M 68.154688 670.53725 
+L 433.831875 670.53725 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_46">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="670.53725" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_27">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="675.095843" transform="rotate(-0 61.154688 675.095843)">0.00</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_47">
+      <path d="M 68.154688 617.287378 
+L 433.831875 617.287378 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_48">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="617.287378" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_28">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="621.845971" transform="rotate(-0 61.154688 621.845971)">0.05</text>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_49">
+      <path d="M 68.154688 564.037506 
+L 433.831875 564.037506 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_50">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="564.037506" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_29">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="568.596099" transform="rotate(-0 61.154688 568.596099)">0.10</text>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_51">
+      <path d="M 68.154688 510.787634 
+L 433.831875 510.787634 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_52">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="510.787634" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_30">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="515.346228" transform="rotate(-0 61.154688 515.346228)">0.15</text>
+     </g>
+    </g>
+    <g id="ytick_13">
+     <g id="line2d_53">
+      <path d="M 68.154688 457.537762 
+L 433.831875 457.537762 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_54">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="457.537762" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_31">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="462.096356" transform="rotate(-0 61.154688 462.096356)">0.20</text>
+     </g>
+    </g>
+    <g id="ytick_14">
+     <g id="line2d_55">
+      <path d="M 68.154688 404.28789 
+L 433.831875 404.28789 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_56">
+      <g>
+       <use xlink:href="#m67819be8ed" x="68.154688" y="404.28789" style="fill: #93a1ae; stroke: #93a1ae; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_32">
+      <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: end; fill: #93a1ae" x="61.154688" y="408.846484" transform="rotate(-0 61.154688 408.846484)">0.25</text>
+     </g>
+    </g>
+    <g id="text_33">
+     <text style="font-size: 12px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: middle; fill: #e6ebef" x="27.553125" y="535.528105" transform="rotate(-90 27.553125 535.528105)">FSS gain over persistence</text>
+    </g>
+   </g>
+   <g id="line2d_57">
+    <path d="M 84.776378 534.28307 
+L 177.506443 447.602818 
+L 231.750054 423.003751 
+L 270.236508 423.352778 
+L 324.480119 451.528586 
+L 362.966574 487.279885 
+L 417.210185 567.795946 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #f0a3bb; stroke-width: 2.4"/>
+    <defs>
+     <path id="m92c8bf6650" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #f0a3bb"/>
+    </defs>
+    <g clip-path="url(#pea44c372e1)">
+     <use xlink:href="#m92c8bf6650" x="84.776378" y="534.28307" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="177.506443" y="447.602818" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="231.750054" y="423.003751" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="270.236508" y="423.352778" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="324.480119" y="451.528586" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="362.966574" y="487.279885" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+     <use xlink:href="#m92c8bf6650" x="417.210185" y="567.795946" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+    </g>
+   </g>
+   <g id="line2d_58">
+    <path d="M 84.776378 528.801379 
+L 177.506443 441.122322 
+L 231.750054 417.094672 
+L 270.236508 420.283065 
+L 324.480119 452.11471 
+L 362.966574 491.39759 
+L 417.210185 585.997402 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #df5f86; stroke-width: 2.4; stroke-linecap: square"/>
+    <g clip-path="url(#pea44c372e1)">
+     <use xlink:href="#mfc8ffb878c" x="84.776378" y="528.801379" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="177.506443" y="441.122322" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="231.750054" y="417.094672" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="270.236508" y="420.283065" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="324.480119" y="452.11471" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="362.966574" y="491.39759" style="fill: #df5f86; stroke: #df5f86"/>
+     <use xlink:href="#mfc8ffb878c" x="417.210185" y="585.997402" style="fill: #df5f86; stroke: #df5f86"/>
+    </g>
+   </g>
+   <g id="line2d_59">
+    <path d="M 84.776378 529.39015 
+L 177.506443 448.038137 
+L 231.750054 428.425004 
+L 270.236508 430.684505 
+L 324.480119 455.943337 
+L 362.966574 495.487474 
+L 417.210185 589.845806 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke-dasharray: 2.4,3.96; stroke-dashoffset: 0; stroke: #c08318; stroke-width: 2.4"/>
+    <g clip-path="url(#pea44c372e1)">
+     <use xlink:href="#mda6978ce7d" x="84.776378" y="529.39015" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="177.506443" y="448.038137" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="231.750054" y="428.425004" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="270.236508" y="430.684505" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="324.480119" y="455.943337" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="362.966574" y="495.487474" style="fill: #c08318; stroke: #c08318"/>
+     <use xlink:href="#mda6978ce7d" x="417.210185" y="589.845806" style="fill: #c08318; stroke: #c08318"/>
+    </g>
+   </g>
+   <g id="line2d_60">
+    <path d="M 84.776378 517.954899 
+L 177.506443 422.610645 
+L 231.750054 400.518961 
+L 270.236508 410.510939 
+L 324.480119 459.811409 
+L 362.966574 519.42662 
+L 417.210185 635.974011 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #4a8ae0; stroke-width: 2.4; stroke-linecap: square"/>
+    <defs>
+     <path id="m83d8f27238" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #4a8ae0"/>
+    </defs>
+    <g clip-path="url(#pea44c372e1)">
+     <use xlink:href="#m83d8f27238" x="84.776378" y="517.954899" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="177.506443" y="422.610645" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="231.750054" y="400.518961" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="270.236508" y="410.510939" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="324.480119" y="459.811409" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="362.966574" y="519.42662" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+     <use xlink:href="#m83d8f27238" x="417.210185" y="635.974011" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+    </g>
+   </g>
+   <g id="line2d_61">
+    <path d="M 84.776378 518.748913 
+L 177.506443 425.169027 
+L 231.750054 405.210116 
+L 270.236508 416.23013 
+L 324.480119 465.279726 
+L 362.966574 523.650959 
+L 417.210185 635.878458 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #9cc0f0; stroke-width: 2.4"/>
+    <defs>
+     <path id="m3a0dea68de" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #9cc0f0"/>
+    </defs>
+    <g clip-path="url(#pea44c372e1)">
+     <use xlink:href="#m3a0dea68de" x="84.776378" y="518.748913" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="177.506443" y="425.169027" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="231.750054" y="405.210116" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="270.236508" y="416.23013" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="324.480119" y="465.279726" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="362.966574" y="523.650959" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+     <use xlink:href="#m3a0dea68de" x="417.210185" y="635.878458" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+    </g>
+   </g>
+   <g id="line2d_62">
+    <path d="M 68.154688 670.53725 
+L 433.831875 670.53725 
+" clip-path="url(#pea44c372e1)" style="fill: none; stroke: #93a1ae; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 68.154688 684.038164 
+L 68.154688 387.018047 
+" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 68.154688 684.038164 
+L 433.831875 684.038164 
+" style="fill: none; stroke: #26313c; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="68.154688" y="381.018047" transform="rotate(-0 68.154688 381.018047)">Against pysteps Lucas-Kanade, to 6 hours</text>
+   </g>
+  </g>
+  <g id="legend_2">
+   <g id="line2d_63">
+    <path d="M 138.974766 746.649258 
+L 148.874766 746.649258 
+L 158.774766 746.649258 
+" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #f0a3bb; stroke-width: 2.4"/>
+    <g>
+     <use xlink:href="#m92c8bf6650" x="148.874766" y="746.649258" style="fill: #f0a3bb; stroke: #f0a3bb"/>
+    </g>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="167.574766" y="750.499258" transform="rotate(-0 167.574766 750.499258)">Block matching, last pair</text>
+   </g>
+   <g id="line2d_64">
+    <path d="M 138.974766 763.150117 
+L 148.874766 763.150117 
+L 158.774766 763.150117 
+" style="fill: none; stroke: #df5f86; stroke-width: 2.4; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#mfc8ffb878c" x="148.874766" y="763.150117" style="fill: #df5f86; stroke: #df5f86"/>
+    </g>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="167.574766" y="767.000117" transform="rotate(-0 167.574766 767.000117)">Block matching, 1 h</text>
+   </g>
+   <g id="line2d_65">
+    <path d="M 138.974766 779.650977 
+L 148.874766 779.650977 
+L 158.774766 779.650977 
+" style="fill: none; stroke-dasharray: 2.4,3.96; stroke-dashoffset: 0; stroke: #c08318; stroke-width: 2.4"/>
+    <g>
+     <use xlink:href="#mda6978ce7d" x="148.874766" y="779.650977" style="fill: #c08318; stroke: #c08318"/>
+    </g>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="167.574766" y="783.500977" transform="rotate(-0 167.574766 783.500977)">Whole-map vector, 30 min</text>
+   </g>
+   <g id="line2d_66">
+    <path d="M 138.974766 796.151836 
+L 148.874766 796.151836 
+L 158.774766 796.151836 
+" style="fill: none; stroke: #4a8ae0; stroke-width: 2.4; stroke-linecap: square"/>
+    <g>
+     <use xlink:href="#m83d8f27238" x="148.874766" y="796.151836" style="fill: #4a8ae0; stroke: #4a8ae0"/>
+    </g>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="167.574766" y="800.001836" transform="rotate(-0 167.574766 800.001836)">pysteps Lucas-Kanade</text>
+   </g>
+   <g id="line2d_67">
+    <path d="M 138.974766 812.652695 
+L 148.874766 812.652695 
+L 158.774766 812.652695 
+" style="fill: none; stroke-dasharray: 8.88,3.84; stroke-dashoffset: 0; stroke: #9cc0f0; stroke-width: 2.4"/>
+    <g>
+     <use xlink:href="#m3a0dea68de" x="148.874766" y="812.652695" style="fill: #9cc0f0; stroke: #9cc0f0"/>
+    </g>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 11px; font-family: 'DejaVu Sans', 'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; text-anchor: start; fill: #e6ebef" x="167.574766" y="816.502695" transform="rotate(-0 167.574766 816.502695)">pysteps Lucas-Kanade, 2 h</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p5ae7885e87">
+   <rect x="68.154688" y="26.298047" width="365.677188" height="297.020117"/>
+  </clipPath>
+  <clipPath id="pea44c372e1">
+   <rect x="68.154688" y="387.018047" width="365.677188" height="297.020117"/>
+  </clipPath>
+ </defs>
+</svg>

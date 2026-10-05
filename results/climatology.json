@@ -1,0 +1,8 @@
+{
+ "scans": 25300,
+ "dry_map_scans": 10768,
+ "thr": 0.5,
+ "dry_map": 0.005,
+ "box_wet_freq_median": 0.024587895797920704,
+ "box_wet_freq_dry_map_p99": 0.001300148588410104
+}

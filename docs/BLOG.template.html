@@ -1,0 +1,461 @@
+<title>Will it rain?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Archivo:wght@500;700;800&display=swap">
+<style>
+:root {
+  color-scheme: dark;
+  --bg: #0b1117; --panel: #111a23; --ink: #e8edf1; --muted: #8d9aa7; --rule: #22303c;
+  --amber: #f6b756; --rain1: #2f63b8; --rain2: #8cc4ff; --rain3: #ffb347;
+  --block: #df5f86; --gw: #c08318; --lk: #4a8ae0; --sprog: #2e9f86; --steps: #9a74d6; --pers: #93a1ae;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 19px/1.6 Newsreader, Georgia, serif; padding-inline: 18px; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 18px 64px; display: grid; gap: 64px; }
+.text { max-width: 640px; }
+h1, h2, .num, .eyebrow, .cap, .tile, .bar-row, .slider-row, footer { font-family: Archivo, "Segoe UI", system-ui, sans-serif; }
+h1 { font-weight: 800; font-size: clamp(2.3rem, 7vw, 4.6rem); line-height: 1; letter-spacing: -0.02em; margin: 0 0 14px; text-wrap: balance; }
+h2 { font-weight: 700; font-size: clamp(1.45rem, 3.4vw, 2.1rem); line-height: 1.15; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance; }
+p { margin: 0 0 12px; }
+.eyebrow { font-weight: 500; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--amber); margin: 0 0 10px; }
+.cap { color: var(--muted); font-size: 0.86rem; line-height: 1.45; margin-top: 8px; }
+section { display: grid; gap: 18px; }
+.panel { background: var(--panel); border: 1px solid var(--rule); border-radius: 14px; overflow: hidden; }
+canvas { display: block; width: 100%; height: auto; }
+#sky { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.wrap { position: relative; z-index: 1; }
+
+/* hero */
+.hero { position: relative; }
+.hero canvas { aspect-ratio: 16 / 10; max-height: 620px; object-fit: cover; }
+.hero .over { position: absolute; left: 0; right: 0; bottom: 0; padding: 26px 28px; background: linear-gradient(to top, rgba(11,17,23,0.96), rgba(11,17,23,0)); }
+.hero .lede { font-size: 1.12rem; max-width: 560px; margin: 0; }
+.hero .stamp { position: absolute; top: 14px; right: 18px; font: 500 0.78rem Archivo, sans-serif; color: var(--muted); }
+
+/* three steps */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.step { padding: 18px; display: grid; gap: 10px; align-content: start; }
+.step svg { width: 100%; height: 120px; }
+.step b { font: 700 1.02rem Archivo, sans-serif; }
+.step span { color: var(--muted); font: 0.92rem/1.45 Archivo, sans-serif; }
+
+/* numbers */
+.tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.tile { padding: 20px; display: grid; gap: 4px; }
+.num { font-weight: 800; font-size: clamp(2.4rem, 6vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.tile .lab { color: var(--muted); font-size: 0.92rem; line-height: 1.35; }
+.bars { padding: 20px; display: grid; gap: 10px; }
+.bar-row { display: grid; grid-template-columns: 170px 1fr 52px; align-items: center; gap: 12px; font-size: 0.92rem; }
+.bar-track { height: 14px; background: #0d151d; border-radius: 7px; overflow: hidden; }
+.bar { height: 100%; border-radius: 7px; transform-origin: left; }
+.go .bar { animation: grow 1.3s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes grow { from { transform: scaleX(0.02); } to { transform: scaleX(1); } }
+.bar-row .v { text-align: right; font-variant-numeric: tabular-nums; }
+.group { color: var(--muted); font: 500 0.74rem Archivo, sans-serif; letter-spacing: 0.12em; text-transform: uppercase; margin-top: 6px; }
+
+/* chart */
+.chart { padding: 14px 10px 6px; }
+.chart svg { width: 100%; height: auto; display: block; }
+.chart .line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.go .line { animation: draw 2s ease-out both; }
+@keyframes draw { from { stroke-dashoffset: 1000; } to { stroke-dashoffset: 0; } }
+.chart text { fill: var(--muted); font: 12px Archivo, sans-serif; }
+
+/* chance */
+.chance { display: grid; grid-template-columns: 1.4fr 1fr; }
+.chance .side { padding: 22px; display: grid; gap: 12px; align-content: center; }
+.slider-row { display: grid; gap: 6px; font-size: 0.9rem; color: var(--muted); }
+input[type=range] { width: 100%; accent-color: var(--amber); }
+input[type=range]:focus-visible { outline: 2px solid var(--amber); outline-offset: 4px; }
+.big { font: 800 3.2rem/1 Archivo, sans-serif; color: var(--amber); font-variant-numeric: tabular-nums; }
+
+/* media */
+figure { margin: 0; }
+figure img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--rule); background: var(--panel); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+footer { color: var(--muted); font-size: 0.84rem; border-top: 1px solid var(--rule); padding-top: 16px; }
+footer ul { margin: 6px 0 0; padding-left: 1.1em; }
+footer a { color: var(--rain2); }
+.more { display: grid; gap: 10px; justify-items: start; }
+.more p { color: var(--muted); max-width: 560px; }
+.button { display: inline-flex; align-items: center; gap: 10px; font: 700 1rem Archivo, sans-serif; color: #0b1117; background: var(--amber);
+  padding: 12px 20px; border-radius: 999px; text-decoration: none; }
+.button:hover { filter: brightness(1.08); }
+.button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+@media (max-width: 760px) {
+  body { font-size: 17.5px; padding-inline: 16px; }
+  .wrap { gap: 48px; }
+  .steps, .tiles, .two, .chance { grid-template-columns: 1fr; }
+  .bar-row { grid-template-columns: 112px 1fr 44px; font-size: 0.84rem; }
+  .hero canvas { aspect-ratio: 4 / 5; }
+  .hero .over { position: static; padding: 4px 18px 20px; background: none; }
+  .chart text { font-size: 19px; }
+}
+@media (prefers-reduced-motion: reduce) { .go .bar, .go .line { animation: none; } .pulse, .anim { animation: none !important; } }
+.anim-sweep { transform-origin: 60px 60px; animation: sweep 3s linear infinite; }
+@keyframes sweep { to { transform: rotate(360deg); } }
+.anim-slide { animation: slide 3.2s ease-in-out infinite; }
+@keyframes slide { 0%, 15% { transform: translateX(0); } 70%, 100% { transform: translateX(120px); } }
+.anim-ghost { animation: ghost 3.2s ease-in-out infinite; }
+@keyframes ghost { 0%, 15% { opacity: .9; } 70%, 100% { opacity: .25; } }
+.pulse { animation: pulse 2.4s ease-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes pulse { 0% { transform: scale(1); opacity: .9; } 100% { transform: scale(3.2); opacity: 0; } }
+</style>
+
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="wrap">
+
+<section class="hero panel" aria-label="The real radar rain of 15 September 2026 as drifting light over Denmark">
+  <canvas id="hero" width="1600" height="1000"></canvas>
+  <div class="stamp">DMI radar · 15 September 2026, 15:00 UTC</div>
+  <div class="over">
+    <p class="eyebrow">Radar nowcasting · Denmark</p>
+    <h1>Will it rain?</h1>
+    <p class="lede">Rain apps predict the next hour by moving the radar's rain along. We tested how simple that can be, on six months of Danish radar: <b>a simple method gets within {{pc:pysteps-lk:bw7:60}} of the state of the art.</b></p>
+  </div>
+</section>
+
+<section>
+  <div class="text">
+    <h2>A nowcast is three steps</h2>
+    <p>No weather model. Just the latest radar maps, and the fact that rain drifts with the wind.</p>
+  </div>
+  <div class="steps">
+    <div class="step panel">
+      <svg viewBox="0 0 240 120" aria-hidden="true">
+        <circle cx="60" cy="60" r="48" fill="none" stroke="#22303c" stroke-width="2"></circle>
+        <circle cx="60" cy="60" r="28" fill="none" stroke="#22303c" stroke-width="2"></circle>
+        <g class="anim anim-sweep"><path d="M60 60 L60 12 A48 48 0 0 1 100 34 Z" fill="#8cc4ff" opacity=".25"></path><line x1="60" y1="60" x2="60" y2="12" stroke="#8cc4ff" stroke-width="2"></line></g>
+        <ellipse cx="160" cy="58" rx="40" ry="24" fill="#2f63b8"></ellipse><ellipse cx="165" cy="56" rx="22" ry="12" fill="#8cc4ff"></ellipse><ellipse cx="170" cy="55" rx="8" ry="5" fill="#ffb347"></ellipse>
+      </svg>
+      <b>1 · The radar sees the rain</b>
+      <span>Five DMI radars, one map every 10 minutes, on 3.2 km cells.</span>
+    </div>
+    <div class="step panel">
+      <svg viewBox="0 0 240 120" aria-hidden="true">
+        <ellipse cx="80" cy="64" rx="38" ry="22" fill="#2f63b8" opacity=".45"></ellipse>
+        <ellipse cx="150" cy="50" rx="38" ry="22" fill="#2f63b8"></ellipse><ellipse cx="154" cy="48" rx="18" ry="10" fill="#8cc4ff"></ellipse>
+        <line x1="86" y1="62" x2="140" y2="50" stroke="#f6b756" stroke-width="4" stroke-linecap="round"></line>
+        <path d="M140 50 l-12 -6 l3 12 z" fill="#f6b756"></path>
+        <text x="20" y="110" fill="#8d9aa7" font-size="12" font-family="Archivo, sans-serif">10 min ago</text><text x="160" y="110" fill="#8d9aa7" font-size="12" font-family="Archivo, sans-serif">now</text>
+      </svg>
+      <b>2 · Measure how it moved</b>
+      <span>Find the rain again in the next map; the shift is its motion.</span>
+    </div>
+    <div class="step panel">
+      <svg viewBox="0 0 240 120" aria-hidden="true">
+        <g class="anim anim-ghost"><ellipse cx="60" cy="60" rx="38" ry="22" fill="#2f63b8"></ellipse></g>
+        <g class="anim anim-slide"><ellipse cx="60" cy="60" rx="38" ry="22" fill="none" stroke="#f6b756" stroke-width="2.5" stroke-dasharray="6 5"></ellipse></g>
+        <text x="20" y="110" fill="#8d9aa7" font-size="12" font-family="Archivo, sans-serif">now</text><text x="160" y="110" fill="#8d9aa7" font-size="12" font-family="Archivo, sans-serif">+1 hour</text>
+      </svg>
+      <b>3 · Move it forward</b>
+      <span>Carry the rain on along that motion, ten minutes at a time.</span>
+    </div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="text">
+    <h2>Simple motion is nearly as good as the state of the art</h2>
+    <p>We replayed {{n:issues}} past moments in {{n:units}} rainy periods, gave every method only the radar up to that moment, and checked where it put the rain an hour later.</p>
+  </div>
+  <div class="tiles">
+    <div class="tile panel"><div class="num" data-count="{{pc:bw7:persistence:60}}" style="color:var(--block)">+{{pc:bw7:persistence:60}}</div><div class="lab">our simple block matching places rain better than "nothing moves"</div></div>
+    <div class="tile panel"><div class="num" data-count="{{pc:pysteps-lk:persistence:60}}" style="color:var(--lk)">+{{pc:pysteps-lk:persistence:60}}</div><div class="lab">pysteps, the state-of-the-art research library</div></div>
+    <div class="tile panel"><div class="num" data-count="{{pc:pysteps-lk:bw7:60}}" style="color:var(--amber)">{{pc:pysteps-lk:bw7:60}}</div><div class="lab">the gap between them, one hour ahead; gone by three hours</div></div>
+  </div>
+  <div class="bars panel" aria-label="Rain placed better than nothing moves, one hour ahead">
+    <div class="group">Simple motion (this project)</div>
+    <div class="bar-row"><span>Block matching</span><div class="bar-track"><div class="bar" style="width:calc({{pc:bw7:persistence:60}} * 2);background:var(--block)"></div></div><span class="v">+{{pc:bw7:persistence:60}}</span></div>
+    <div class="bar-row"><span>Whole-map vector</span><div class="bar-track"><div class="bar" style="width:calc({{pc:gw4:persistence:60}} * 2);background:var(--gw)"></div></div><span class="v">+{{pc:gw4:persistence:60}}</span></div>
+    <div class="group">State of the art (pysteps)</div>
+    <div class="bar-row"><span>Lucas-Kanade</span><div class="bar-track"><div class="bar" style="width:calc({{pc:pysteps-lk:persistence:60}} * 2);background:var(--lk)"></div></div><span class="v">+{{pc:pysteps-lk:persistence:60}}</span></div>
+    <div class="bar-row"><span>S-PROG</span><div class="bar-track"><div class="bar" style="width:calc({{pc:pysteps-sprog:persistence:60}} * 2);background:var(--sprog)"></div></div><span class="v">+{{pc:pysteps-sprog:persistence:60}}</span></div>
+    <div class="bar-row"><span>STEPS ensemble</span><div class="bar-track"><div class="bar" style="width:calc({{pc:pysteps-steps-mean:persistence:60}} * 2);background:var(--steps)"></div></div><span class="v">+{{pc:pysteps-steps-mean:persistence:60}}</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="text">
+    <h2>Over Denmark, one arrow is almost enough</h2>
+    <p>Rain rides the wind about 3 km up. Over flat Denmark that wind is nearly the same everywhere within about 50 km, so one motion for the whole map does almost as well as one per block. Typical rain here moves at {{ms:speed}} km/h, toward the east or north-east.</p>
+  </div>
+  <div class="panel"><canvas id="arrows" width="1600" height="900" aria-label="The motion of each 26 km block on 4 September 2026, merging into one arrow for the whole map"></canvas></div>
+  <p class="cap" id="arrows-cap">Real motion of each 26 km block between two scans, 4 September 2026, merging into one arrow for the whole map.</p>
+</section>
+
+<section class="reveal">
+  <div class="text">
+    <h2>The limit is rain that forms or dies</h2>
+    <p>Accuracy halves within three hours for every method. Moving rain cannot see a shower being born, or one fading away.</p>
+  </div>
+  <div class="chart panel">
+    <svg id="fade" viewBox="0 0 640 300" role="img" aria-label="Spatial accuracy from 30 minutes to 3 hours ahead"></svg>
+  </div>
+</section>
+
+<section>
+  <div class="text">
+    <h2>One forecast can also give an honest chance of rain</h2>
+    <p>Copy the forecast 40 times and shift each copy a little, more the further ahead: about a kilometre for every three minutes. The chance of rain at a spot is the share of copies that bring rain there. Drag the slider.</p>
+  </div>
+  <div class="chance panel">
+    <canvas id="chance" width="900" height="620" aria-label="A rain band approaching a spot, with 40 shifted copies"></canvas>
+    <div class="side">
+      <div class="slider-row"><label for="lead">Minutes ahead: <b id="lead-v">60</b></label><input id="lead" type="range" min="0" max="120" step="10" value="60"></div>
+      <div><div class="big" id="pct">0%</div><div class="cap">chance of rain at the spot (illustration)</div></div>
+      <div class="cap">Scored on real rain, this simple model reaches <b style="color:var(--ink)">{{lt:0.5:start:60:gw_shift:pct}}</b> of what the STEPS ensemble achieves for "rain starts here within the hour", and {{lt:0.5:start:120:gw_shift:pct}} within two hours.</div>
+    </div>
+  </div>
+</section>
+
+<section class="two">
+  <div>
+    <div class="text">
+      <h2>At your door</h2>
+      <p>At five Danish cities, moving the rain catches <b>{{cpod:gw4:1}} to {{cpod:pysteps-lk:1}}</b> of the hours that bring rain in the next hour, against {{cpod:persistence:1}} if you assume nothing moves.</p>
+    </div>
+    <div class="panel"><svg id="cities" viewBox="0 0 600 460" role="img" aria-label="The five cities on a map of Denmark"></svg></div>
+  </div>
+  <figure>
+    <img src="figures/22-case-late-summer.gif" alt="Late summer, 9 September 2026: radar and three forecasts for the next two hours" loading="lazy">
+    <figcaption class="cap">A real evening: the radar (top left) against three forecasts. The white line is where it really rained.</figcaption>
+  </figure>
+</section>
+
+<section class="more">
+  <h2>Want the details?</h2>
+  <p>The full report has every method, test and robustness check behind these numbers, from how the motion is measured to how much history to use.</p>
+  <a class="button" href="%%REPORT%%">Read the full report &rarr;</a>
+</section>
+
+<footer>
+  DMI open radar data, April to September 2026 · Denmark-rain-nowcast
+  <ul>
+    <li>One place, one season: nothing here speaks for winter, snow or mountains.</li>
+    <li>The radar is not the truth: it estimates rain, and every method is scored against the same radar.</li>
+    <li>The full report, with every method, test and robustness check: <a href="%%REPORT%%">read it here</a>.</li>
+  </ul>
+</footer>
+
+</div>
+
+<script>
+const D = /*DATA*/null;
+const FSS = {
+  "nothing moves": [{{f:persistence:30}}, {{f:persistence:60}}, {{f:persistence:90}}, {{f:persistence:120}}, {{f:persistence:180}}],
+  "block matching": [{{f:bw7:30}}, {{f:bw7:60}}, {{f:bw7:90}}, {{f:bw7:120}}, {{f:bw7:180}}],
+  "whole-map vector": [{{f:gw4:30}}, {{f:gw4:60}}, {{f:gw4:90}}, {{f:gw4:120}}, {{f:gw4:180}}],
+  "pysteps": [{{f:pysteps-lk:30}}, {{f:pysteps-lk:60}}, {{f:pysteps-lk:90}}, {{f:pysteps-lk:120}}, {{f:pysteps-lk:180}}]
+};
+const REDUCED = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const K = Math.cos(56 * Math.PI / 180);
+
+// map projection for a canvas: grid cells (224 x 160) and lon/lat onto a box, keeping Denmark's shape
+function projector(w, h, pad, zoom, cx, cy) {
+  const E = D.ext, gw = (E[1] - E[0]) * K, gh = E[3] - E[2];
+  const s = Math.min((w - 2 * pad) / gw, (h - 2 * pad) / gh) * (zoom || 1);
+  const ox = w / 2 - ((cx ?? (E[0] + E[1]) / 2) - E[0]) * K * s, oy = h / 2 - (E[3] - (cy ?? (E[2] + E[3]) / 2)) * s;
+  return {
+    ll: (lon, lat) => [ox + (lon - E[0]) * K * s, oy + (E[3] - lat) * s],
+    cell: (c, r) => [ox + (c + 0.5) / 224 * gw * s, oy + (r + 0.5) / 160 * gh * s],
+    per: gw * s / 224
+  };
+}
+function coast(ctx, P, color, width) {
+  ctx.strokeStyle = color; ctx.lineWidth = width; ctx.lineJoin = "round";
+  for (const ring of D.coast) { ctx.beginPath(); ring.forEach((p, i) => { const [x, y] = P.ll(p[0], p[1]); i ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }); ctx.stroke(); }
+}
+function whenVisible(el, start, stop) {
+  if (!("IntersectionObserver" in window)) { start(); return; }
+  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? start() : stop && stop()), { threshold: 0.15 }).observe(el);
+}
+
+// ---------- the page's background: rain falling at three depths, slanted by a light wind
+(function sky() {
+  const cv = document.getElementById("sky"), ctx = cv.getContext("2d");
+  const LAYERS = [{ n: 85, len: 11, speed: 7, a: 0.17, w: 1.1 }, { n: 60, len: 20, speed: 12, a: 0.24, w: 1.4 }, { n: 32, len: 32, speed: 19, a: 0.32, w: 1.8 }];
+  const SLANT = 0.18;                                          // sideways drift per unit of fall
+  let W = 0, H = 0, drops = [], run = !REDUCED;
+  function size() {
+    const r = Math.min(2, window.devicePixelRatio || 1);
+    W = cv.width = Math.round(innerWidth * r); H = cv.height = Math.round(innerHeight * r);
+    ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.scale(r, r);
+    const area = Math.max(0.6, innerWidth * innerHeight / (1280 * 800));   // about the same density on a phone and a desktop
+    drops = [];
+    LAYERS.forEach(L => { for (let i = 0; i < Math.max(8, Math.round(L.n * area)); i++)
+      drops.push({ L, x: Math.random() * (innerWidth + 200) - 100, y: Math.random() * innerHeight }); });
+  }
+  function draw() {
+    ctx.clearRect(0, 0, innerWidth, innerHeight);
+    ctx.lineCap = "round";
+    for (const d of drops) {
+      const L = d.L;
+      if (run) { d.y += L.speed; d.x += L.speed * SLANT; if (d.y - L.len > innerHeight) { d.y = -L.len; d.x = Math.random() * (innerWidth + 200) - 200; } }
+      ctx.strokeStyle = `rgba(140,196,255,${L.a})`; ctx.lineWidth = L.w;
+      ctx.beginPath(); ctx.moveTo(d.x, d.y); ctx.lineTo(d.x - L.len * SLANT, d.y - L.len); ctx.stroke();
+    }
+    if (run) requestAnimationFrame(draw);
+  }
+  size(); window.addEventListener("resize", () => { size(); if (!run) draw(); });
+  draw();                                                       // drawn once at rest; moving unless reduced motion
+})();
+
+// ---------- hero: the real rain as drifting light
+(function hero() {
+  const cv = document.getElementById("hero"), ctx = cv.getContext("2d");
+  const W = cv.width, H = cv.height;
+  const P = projector(W, H, 40, 1.08);
+  const cells = []; for (let i = 0; i < D.rain.length; i++) { const v = +D.rain[i]; if (v) cells.push(i, v); }
+  const COL = ["", "#2f63b8", "#8cc4ff", "#ffb347"];
+  const N = Math.min(9000, cells.length / 2 * 3), parts = [];
+  function spawn(p) {
+    const j = 2 * Math.floor(Math.random() * cells.length / 2), idx = cells[j], v = cells[j + 1];
+    p.c = idx % 224 + Math.random(); p.r = Math.floor(idx / 224) + Math.random(); p.v = v; p.age = Math.random() * 300;
+  }
+  for (let i = 0; i < N; i++) { const p = {}; spawn(p); parts.push(p); }
+  let run = false, raf = 0;
+  let dot = 2.2, k = 1.4;
+  function scale() {                                         // bitmap pixels per screen pixel (the canvas is cropped to cover on a phone)
+    const r = cv.clientWidth ? Math.min(W / cv.clientWidth, H / cv.clientHeight) : 1;
+    k = Math.max(1.4, r); dot = Math.max(2.2, 1.2 * r);
+  }
+  scale(); window.addEventListener("resize", scale);
+  function cities() {                                        // reference points: the five cities of the study
+    ctx.font = `500 ${Math.round(12 * k)}px Archivo, sans-serif`;
+    for (const [name, lon, lat] of D.cities) {
+      const [x, y] = P.ll(lon, lat);
+      ctx.fillStyle = "#0b1117"; ctx.beginPath(); ctx.arc(x, y, 4.5 * k, 0, 6.283); ctx.fill();
+      ctx.fillStyle = "#e8edf1"; ctx.beginPath(); ctx.arc(x, y, 3 * k, 0, 6.283); ctx.fill();
+      ctx.fillStyle = "rgba(232,237,241,0.85)"; ctx.textAlign = name === "Copenhagen" ? "right" : "left";
+      ctx.fillText(name, x + (name === "Copenhagen" ? -7 : 7) * k, y + 4 * k);
+    }
+  }
+  function frame() {
+    ctx.fillStyle = "rgba(17,26,35,0.16)"; ctx.fillRect(0, 0, W, H);
+    coast(ctx, P, "rgba(140,170,200,0.55)", 1.6);
+    ctx.globalCompositeOperation = "lighter";
+    for (const p of parts) {
+      p.c += D.vec[0] * 0.018; p.r += D.vec[1] * 0.018; p.age += 1;
+      if (p.age > 420 || p.c < 0 || p.c > 224 || p.r < 0 || p.r > 160) spawn(p);
+      const [x, y] = P.cell(p.c - 0.5, p.r - 0.5);
+      ctx.fillStyle = COL[p.v]; ctx.globalAlpha = p.v === 3 ? 0.55 : 0.32;
+      ctx.fillRect(x, y, dot, dot);
+    }
+    ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over";
+    cities();
+    if (run) raf = requestAnimationFrame(frame);
+  }
+  ctx.fillStyle = "#111a23"; ctx.fillRect(0, 0, W, H);
+  for (let i = 0; i < 40; i++) frame();                     // a full picture at rest
+  if (!REDUCED) whenVisible(cv, () => { if (!run) { run = true; frame(); } }, () => { run = false; cancelAnimationFrame(raf); });
+})();
+
+// ---------- count-up numbers, growing bars, the drawn chart: start from their final state at rest
+document.querySelectorAll(".reveal").forEach(sec => whenVisible(sec, () => {
+  if (sec.dataset.done || REDUCED) return; sec.dataset.done = 1; sec.classList.add("go");
+  sec.querySelectorAll("[data-count]").forEach(el => {
+    const target = parseFloat(el.dataset.count), pre = el.textContent.startsWith("+") ? "+" : "", t0 = performance.now();
+    const tick = now => { const k = Math.min(1, (now - t0) / 1200), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = pre + Math.round(target * e) + "%"; if (k < 1) requestAnimationFrame(tick); };
+    requestAnimationFrame(tick);
+  });
+}));
+
+// ---------- one arrow per block, merging into one for the whole map
+(function arrows() {
+  const cv = document.getElementById("arrows"), ctx = cv.getContext("2d"), W = cv.width, H = cv.height;
+  const P = projector(W, H, 30, 1.0);
+  const B = D.blocks, g = D.gvec;
+  const L = 6 / Math.max(...B.map(b => Math.hypot(b[2], b[3])), Math.hypot(g[0], g[1]));   // longest arrow: 6 of the block's 8 cells
+  let t = 0, run = false, raf = 0;
+  function arrow(x0, y0, dx, dy, col) {
+    const [ax, ay] = P.cell(x0 - dx * L / 2, y0 - dy * L / 2), [bx, by] = P.cell(x0 + dx * L / 2, y0 + dy * L / 2);
+    const a = Math.atan2(by - ay, bx - ax), h = 7 * Math.max(1, W / (cv.clientWidth || W));
+    const px = Math.max(1, W / (cv.clientWidth || W));         // keep strokes legible on a narrow screen
+    ctx.strokeStyle = col; ctx.fillStyle = col; ctx.lineWidth = 2.2 * px; ctx.beginPath(); ctx.moveTo(ax, ay); ctx.lineTo(bx, by); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(bx - h * Math.cos(a - 0.45), by - h * Math.sin(a - 0.45)); ctx.lineTo(bx - h * Math.cos(a + 0.45), by - h * Math.sin(a + 0.45)); ctx.fill();
+  }
+  function mix(a, b, k) { return a + (b - a) * k; }
+  function draw(k) {
+    ctx.fillStyle = "#111a23"; ctx.fillRect(0, 0, W, H);
+    coast(ctx, P, "rgba(120,150,180,0.4)", 1.3);
+    const c1 = [223, 95, 134], c2 = [192, 131, 24];
+    const col = `rgb(${c1.map((v, i) => Math.round(mix(v, c2[i], k))).join(",")})`;
+    for (const b of B) arrow(b[0], b[1], mix(b[2], g[0], k), mix(b[3], g[1], k), col);
+    ctx.fillStyle = "#e8edf1"; ctx.font = `600 ${Math.round(17 * Math.max(1.6, W / (cv.clientWidth || W)))}px Archivo, sans-serif`;
+    ctx.fillText(k < 0.5 ? "one motion per block" : "one motion for the whole map", 36, 58);
+  }
+  function frame() {
+    t += 1 / 60; const ph = (t % 7) / 7;                       // 7 s loop: hold, merge, hold, split
+    const k = ph < 0.3 ? 0 : ph < 0.45 ? (ph - 0.3) / 0.15 : ph < 0.8 ? 1 : 1 - (ph - 0.8) / 0.2;
+    draw(k * k * (3 - 2 * k)); if (run) raf = requestAnimationFrame(frame);
+  }
+  draw(0);
+  if (!REDUCED) whenVisible(cv, () => { if (!run) { run = true; frame(); } }, () => { run = false; cancelAnimationFrame(raf); });
+})();
+
+// ---------- accuracy fading with lead time
+(function fade() {
+  const svg = document.getElementById("fade"), ns = "http://www.w3.org/2000/svg";
+  const leads = [30, 60, 90, 120, 180], X = l => 60 + (l - 30) / 150 * 540, Y = f => 260 - (f - 0.2) / 0.75 * 240;
+  const col = { "nothing moves": "#93a1ae", "block matching": "#df5f86", "whole-map vector": "#c08318", "pysteps": "#4a8ae0" };
+  const el = (n, a) => { const e = document.createElementNS(ns, n); for (const k in a) e.setAttribute(k, a[k]); svg.appendChild(e); return e; };
+  [0.4, 0.6, 0.8].forEach(v => { el("line", { x1: 60, x2: 600, y1: Y(v), y2: Y(v), stroke: "#22303c" }); el("text", { x: 52, y: Y(v) + 4, "text-anchor": "end" }).textContent = v.toFixed(1); });
+  leads.forEach(l => { el("text", { x: X(l), y: 286, "text-anchor": "middle" }).textContent = l < 60 ? l + " min" : (l / 60) + " h"; });
+  Object.entries(FSS).forEach(([name, v], i) => {
+    const d = v.map((f, j) => (j ? "L" : "M") + X(leads[j]) + " " + Y(f)).join(" ");
+    const p = el("path", { d, class: "line", stroke: col[name], "stroke-dasharray": name === "nothing moves" ? "7 7" : "1000", "stroke-dashoffset": 0 });
+    if (name === "nothing moves") p.style.animation = "none";
+    const ly = 196 + 20 * i;                                   // legend in the empty lower left
+    el("line", { x1: 76, x2: 100, y1: ly - 4, y2: ly - 4, stroke: col[name], "stroke-width": 3, "stroke-dasharray": name === "nothing moves" ? "5 4" : "none" });
+    const t = el("text", { x: 108, y: ly }); t.textContent = name; t.setAttribute("fill", col[name]);
+  });
+  el("text", { x: 60, y: 14 }).textContent = "spatial accuracy (1 = perfect)";
+})();
+
+// ---------- a chance of rain at one spot: 40 shifted copies
+(function chance() {
+  const cv = document.getElementById("chance"), ctx = cv.getContext("2d"), W = cv.width, H = cv.height;
+  const slider = document.getElementById("lead"), out = document.getElementById("pct"), lv = document.getElementById("lead-v");
+  const km = 2.2;                                             // pixels per km in this illustration
+  const spot = [W * 0.62, H * 0.5];
+  const Z = []; let s = 7; const rnd = () => (s = (s * 16807) % 2147483647) / 2147483647;
+  for (let i = 0; i < 40; i++) { const u = Math.max(rnd(), 1e-9), v = rnd(), r = Math.sqrt(-2 * Math.log(u)); Z.push([r * Math.cos(6.283 * v), r * Math.sin(6.283 * v)]); }
+  function band(x, y, alpha, stroke) {                         // a rain band 60 x 120 km, drifting east at 40 km/h
+    ctx.beginPath(); ctx.ellipse(x, y, 30 * km * 2, 60 * km * 1.6, -0.25, 0, 6.283);
+    if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = 1.2; ctx.stroke(); } else { ctx.fillStyle = `rgba(140,196,255,${alpha})`; ctx.fill(); }
+  }
+  function inBand(px, py, x, y) { const a = 30 * km * 2, b = 60 * km * 1.6, c = Math.cos(0.25), sn = Math.sin(0.25);
+    const dx = px - x, dy = py - y, u = dx * c - dy * sn, v = dx * sn + dy * c; return (u * u) / (a * a) + (v * v) / (b * b) <= 1; }
+  function draw(lead) {
+    ctx.fillStyle = "#111a23"; ctx.fillRect(0, 0, W, H);
+    const x = spot[0] - 230 + lead / 60 * 40 * km * 1.25, y = spot[1] + 10, sig = lead / 3 * km;
+    let n = 0;
+    for (const z of Z) { const cx = x + z[0] * sig, cy = y + z[1] * sig; band(cx, cy, 0, "rgba(246,183,86,0.35)"); if (inBand(spot[0], spot[1], cx, cy)) n++; }
+    band(x, y, 0.25);
+    ctx.fillStyle = "#e8edf1"; ctx.beginPath(); ctx.arc(spot[0], spot[1], 9, 0, 6.283); ctx.fill();
+    ctx.font = "600 34px Archivo, sans-serif"; ctx.fillText("your spot", spot[0] + 16, spot[1] - 14);
+    ctx.fillStyle = "#8d9aa7"; ctx.font = "28px Archivo, sans-serif";
+    ctx.fillText("blue: the forecast   ·   amber: 40 shifted copies", 24, H - 24);
+    out.textContent = Math.round(n / 40 * 100) + "%"; lv.textContent = lead;
+  }
+  slider.addEventListener("input", () => draw(+slider.value));
+  draw(+slider.value);
+})();
+
+// ---------- five cities
+(function cities() {
+  const svg = document.getElementById("cities"), ns = "http://www.w3.org/2000/svg";
+  const W = 600, H = 460, P = projector(W, H, 10, 1.55, 10.6, 56.1);
+  const el = (n, a, txt) => { const e = document.createElementNS(ns, n); for (const k in a) e.setAttribute(k, a[k]); if (txt) e.textContent = txt; svg.appendChild(e); return e; };
+  for (const ring of D.coast) el("path", { d: ring.map((p, i) => (i ? "L" : "M") + P.ll(p[0], p[1]).map(v => v.toFixed(1)).join(" ")).join(" "), fill: "none", stroke: "#3b5068", "stroke-width": 1.2 });
+  D.cities.forEach(([name, lon, lat], i) => {
+    const [x, y] = P.ll(lon, lat);
+    el("circle", { cx: x, cy: y, r: 7, fill: "#f6b756", class: "pulse", style: `animation-delay:${i * 0.4}s` });
+    el("circle", { cx: x, cy: y, r: 6, fill: "#f6b756" });
+    el("text", { x: x + 12, y: y + 5, fill: "#e8edf1", "font-family": "Archivo, sans-serif", "font-size": 17 }, name);
+  });
+})();
+</script>
